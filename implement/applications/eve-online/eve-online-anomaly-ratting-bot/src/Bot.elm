@@ -8,7 +8,7 @@
      + Place to use in combat (to activate on targets) in the top row.
      + Place modules that should always be active in the middle row.
      + Hide passive modules by disabling the check-box `Display Passive Modules`.
-   + Configure the keyboard key 'W' to make the ship orbit.
+   + Configure the keyboard key 'W' to make the ship orbit.dronesInLocalSpaceQuantity 
 -}
 {-
    bot-catalog-tags:eve-online,ratting
@@ -127,7 +127,7 @@ probeScanResultsRepresentsMatchingAnomaly settings probeScanResult =
 
         matchesName =
             (settings.anomalyName |> String.isEmpty)
-                || anyContainedTextMatches (String.toLower >> String.contains (settings.anomalyName |> String.toLower))
+                || !anyContainedTextMatches (String.toLower >> String.contains "onduit")
     in
     isCombatAnomaly && matchesName
 
