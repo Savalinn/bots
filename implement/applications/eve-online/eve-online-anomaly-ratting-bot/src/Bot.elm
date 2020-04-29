@@ -127,7 +127,7 @@ probeScanResultsRepresentsMatchingAnomaly settings probeScanResult =
 
         matchesName =
             (settings.anomalyName |> String.isEmpty)
-                || !anyContainedTextMatches (String.toLower >> String.contains "onduit")
+                || not anyContainedTextMatches (String.toLower >> String.contains "onduit")
     in
     isCombatAnomaly && matchesName
 
