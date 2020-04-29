@@ -379,7 +379,7 @@ launchAndEngageDrones parsedUserInterface =
                                     )
                                 )
 
-                        else if 0 < dronesInBayQuantity && dronesInLocalSpaceQuantity < 5 then
+                        else if 0 < dronesInBayQuantity && dronesInLocalSpaceQuantity < 4 then
                             Just
                                 (DescribeBranch "Launch drones"
                                     (EndDecisionPath
