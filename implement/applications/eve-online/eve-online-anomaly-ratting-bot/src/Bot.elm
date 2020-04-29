@@ -45,7 +45,7 @@ defaultBotSettings : BotSettings
 defaultBotSettings =
     { anomalyName = ""
     , maxTargetCount = 3
-    , botStepDelayMilliseconds = 1300
+    , botStepDelayMilliseconds = 2300
     }
 
 
