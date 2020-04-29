@@ -127,9 +127,12 @@ probeScanResultsRepresentsMatchingAnomaly settings probeScanResult =
 
         matchesName =
             (settings.anomalyName |> String.isEmpty)
-                || not anyContainedTextMatches (String.toLower >> String.contains "onduit")
+                || anyContainedTextMatches (String.toLower >> String.contains (settings.anomalyName |> String.toLower))
+                
+        conduit = 
+          anyContainedTextMatches (String.toLower >> String.contains "onduit")
     in
-    isCombatAnomaly && matchesName
+    isCombatAnomaly && matchesName && (not conduit)
 
 
 decideNextAction : BotDecisionContext -> DecisionPathNode
